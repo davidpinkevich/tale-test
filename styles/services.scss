@@ -1,0 +1,132 @@
+.services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 20px 0px;
+  gap: 48px;
+  color: $mainFontColor;
+
+  @media (min-width: $tabletWidth) {
+    flex-direction: row;
+  }
+  @media (min-width: $laptopWidth) {
+    gap: 71px;
+  }
+
+  &__tests {
+    position: relative;
+    @media (min-width: $maxWidth) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: -42px;
+        width: 1px;
+        height: 126px;
+        background-color: $mainBlue;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: -34px;
+        width: 1px;
+        height: 141px;
+        background-color: $mainBlue;
+      }
+    }
+  }
+
+  &__info {
+    &-title {
+      font-weight: 500;
+      line-height: 140.8%;
+      font-size: 25px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+    &-preview {
+      position: relative;
+      height: 250px;
+      width: 100%;
+      margin-top: 28px;
+      & img:last-child {
+        display: none;
+      }
+      @media (min-width: $laptopWidth) {
+        margin-top: 42px;
+        height: 289px;
+        & img:first-child {
+          display: none;
+        }
+        & img:last-child {
+          display: block;
+        }
+      }
+    }
+    &-body {
+      margin-top: 22px;
+      line-height: 140%;
+      @media (min-width: $laptopWidth) {
+        margin-top: 32px;
+      }
+    }
+    &-btn {
+      margin-top: 20px;
+      border: 1px solid $mainBlue;
+      font-family: $fontPrompt;
+      border-radius: 1px;
+      width: 157px;
+      height: 44px;
+      color: $mainBlue;
+      font-size: 16px;
+      background-color: inherit;
+      letter-spacing: 1.6px;
+      transition: all 0.12s;
+      @media (min-width: $laptopWidth) {
+        margin-top: 30px;
+        letter-spacing: 1.1px;
+        &:hover {
+          background-color: $mainBlue;
+          color: white;
+        }
+      }
+    }
+  }
+  &__tests-title {
+    & span {
+      color: $mainBlue;
+    }
+    font-weight: 500;
+    line-height: 140.8%;
+    font-size: 25px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    @media (min-width: $laptopWidth) {
+      padding-left: 6px;
+    }
+  }
+  @media (min-width: $laptopWidth) {
+    width: $laptopWidth;
+  }
+  @media (min-width: $maxWidth) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -21px;
+      left: 20px;
+      width: 325px;
+      height: 1px;
+      background-color: $mainBlue;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 0px;
+      width: 325px;
+      height: 1px;
+      background-color: $mainBlue;
+    }
+  }
+}
