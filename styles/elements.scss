@@ -131,7 +131,13 @@
         gap: 5px;
         font-family: $fontPrompt;
         letter-spacing: 1.5px;
+        transition: all 0.12s;
         color: $mainBlue;
+        @media (min-width: $laptopWidth) {
+          &:hover {
+            color: rgb(38, 38, 115);
+          }
+        }
       }
     }
   }
