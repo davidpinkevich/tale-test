@@ -1,0 +1,6 @@
+@mixin adaptiv-768($property, $startSize, $minSize) {
+  #{$property}: calc(
+    #{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 425px) /
+          (768 - 425))
+  );
+}
